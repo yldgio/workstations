@@ -1,0 +1,57 @@
+core:
+  includes:
+    - components/core/core
+    - components/vs/v17p
+  provider:
+    memory: 8192
+  chef:
+    cookbooks:
+      - gusztavvargadr_workstations_core
+    json:
+      gusztavvargadr_workstations_core:
+        requirements:
+          features:
+            IIS-WebServerRole:
+            IIS-WebServer:
+            IIS-ManagementScriptingTools:
+        tools:
+          chocolatey:
+            vscode:
+              install:
+            notepadplusplus:
+              install:
+            GoogleChrome:
+              install:
+            7zip:
+              install:
+            nodejs:
+              install:
+            xml-copy-editor:
+              install:
+            DotNet4.0:
+              install:
+            DotNet4.5:
+              install:
+            dotnet-4.6.2:
+              install:
+            visualstudio2017professional:
+              install:
+            ssdt15:
+              install:
+            vcredist2015:
+              install:
+            webpi:
+              install:
+            javaruntime:
+              install:
+                version: 8.0.151
+xp9:
+  includes:
+    - components/sitecore/core
+  box: w16s-iis
+  chef:
+    json:
+      gusztavvargadr_workstations_core:
+        tools:
+          files:
+            file:///Windows/System32/drivers/etc/hosts: /Users/vagrant/AppData/Local/Temp/hosts

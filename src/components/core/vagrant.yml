@@ -2,7 +2,7 @@ core:
   includes: []
   default: false
   provider:
-    memory: 4096
+    memory: 8192
     cpus: 2
     linked_clone: <%= !ENV['VAGRANT_LINKED_CLONE'].to_s.empty? %>
   chef:

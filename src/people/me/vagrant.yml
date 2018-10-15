@@ -8,6 +8,14 @@ work:
     - projects/identityserver/v3
   default: true
 
+sitecore9:
+  includes:
+    - components/sitecore/xp9
+    - components/git/core
+    - components/nuget/core
+    - stacks/dotnetcore/library
+    - stacks/sql/engine
+    
 playground:
   includes:
     - components/os/w16s
